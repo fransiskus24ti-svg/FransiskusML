@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:gravity="center">
+
+    <!-- Logo Redbull di Tengah -->
+    <ImageView
+        android:id="@+id/imgSplashLogo"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:src="@drawable/rbf1"
+        android:scaleType="fitCenter"
+        android:contentDescription="Splash Logo" />
+
+</RelativeLayout>
