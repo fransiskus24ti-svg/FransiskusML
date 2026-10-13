@@ -21,8 +21,6 @@ class AuthActivity : AppCompatActivity() {
         // Cek apakah user sudah login sebelumnya
         val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
         if (isLoggedIn) {
-            // Arahkan ke BaseActivity (bukan SixthActivity)
-            val intent = Intent(this, BaseActivity::class.java)
             startActivity(intent)
             finish()
             return
@@ -49,8 +47,6 @@ class AuthActivity : AppCompatActivity() {
                 editor.putString("username", username)
                 editor.apply()
 
-                // Arahkan ke BaseActivity (bukan SixthActivity)
-                val intent = Intent(this, BaseActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {

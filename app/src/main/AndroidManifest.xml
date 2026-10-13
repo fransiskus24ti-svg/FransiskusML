@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,37 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Saturn_Frans">
 
-        <!-- SplashActivity dijadikan LAUNCHER utama -->
-        <activity
-            android:name=".SplashActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- AuthActivity (Halaman Login) -->
-        <activity
-            android:name=".AuthActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-
-        <!-- MainActivity -->
+        <!-- 1. MainActivity sebagai Utama (LAUNCHER) -->
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Pertemuan 2 -->
+        <!-- 2. Pertemuan 2 -->
         <activity
             android:name=".pertemuan2.SecondActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Pertemuan 3 -->
+        <!-- 3. Pertemuan 3 -->
         <activity
             android:name=".pertemuan_3.ThirdActivity"
             android:exported="false" />
@@ -53,43 +33,27 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Pertemuan 4 -->
+        <!-- 4. Pertemuan 4 -->
         <activity
             android:name=".pertemuan_4.FourthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-        <!-- Pertemuan 5 -->
         <activity
             android:name=".pertemuan_5.FifthActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".pertemuan_5.WebViewActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".pertemuan_6.SixthActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".Message.MessageFragment"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".More.MoreFragment"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".BaseActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".HomeFragment"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
